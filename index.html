@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="description" content="Portfolio of an independent designer: branding, graphic design and product design.">
+<!-- Google Fonts (needs internet). If offline, the fallback fonts are used. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;800&family=JetBrains+Mono:wght@400;500;700&family=Reenie+Beanie&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- THE FOLDER: three pages stacked on top of each other. Only one is visible. -->
+<main class="book">
+
+  <!-- ABOUT -->
+  <section class="page page-about" id="page-about" data-title="About">
+    <div class="scroll about-scroll">
+      <div class="clip-note"><svg viewBox="0 0 20 50" aria-hidden="true"><path d="M6 44V10a5 5 0 0 1 10 0v30a3 3 0 0 1-6 0V14" fill="none" stroke="#8a8f94" stroke-width="2"/></svg><span id="aboutNote"></span></div>
+      <div class="about-col">
+        <h1 class="giant" id="name"></h1>
+        <p class="bio" id="bio"></p>
+        <a class="underlink" href="#contact" id="letsTalk"></a>
+        <div class="photo-wrap">
+          <div class="stamp"><img id="photo" alt=""></div>
+          <p class="hand tagline" id="tagline"></p>
+        </div>
+      </div>
+      <a class="hand works-note" href="#works"><svg viewBox="0 0 60 20" aria-hidden="true"><path d="M58 10C40 4 20 6 6 10M6 10l8-6M6 10l8 6" fill="none" stroke="#1b1b1b" stroke-width="1.5"/></svg><span id="worksNote"></span></a>
+      <div class="labels" id="labels"></div>
+      <div class="foot"><span><span id="city"></span> &bull; <span id="clock"></span></span><span id="working"></span></div>
+    </div>
+    <div class="watermark" aria-hidden="true">About</div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="page page-works" id="page-works" data-title="Works">
+    <div class="scroll">
+      <h1 class="giant">WORKS</h1>
+      <div class="toggle"><button id="btnGrid" class="on">GRID</button><button id="btnList">LIST</button></div>
+      <div id="worksBody" class="grid"></div>
+    </div>
+    <div class="watermark" aria-hidden="true">Works</div>
+  </section>
+
+  <!-- A SINGLE PROJECT (opens when you click a project) -->
+  <section class="page page-works" id="page-project" data-title="Project">
+    <div class="scroll" id="projectBody"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page page-contact" id="page-contact" data-title="Contact">
+    <div class="scroll">
+      <h1 class="giant">CONTACT</h1>
+      <p class="intro" id="contactIntro"></p>
+      <div class="table">
+        <div class="row" id="socialsRow"><span class="lbl">SOCIALS</span></div>
+        <div class="row"><span class="lbl">EMAIL</span><a id="emailLink" class="mono-link"></a><button class="copy" id="copyBtn" type="button">COPY</button></div>
+        <form id="form" novalidate class="form">
+          <label class="row"><span class="lbl">SCOPE</span><select name="scope" id="scope"></select></label>
+          <label class="row"><span class="lbl">NAME</span><input name="name" placeholder="Jane Smith" autocomplete="name"></label>
+          <label class="row"><span class="lbl">EMAIL</span><input name="email" type="email" placeholder="jane@example.com" autocomplete="email"></label>
+          <label class="row tall"><span class="lbl">MESSAGE</span><textarea name="message" rows="3" placeholder="Write message"></textarea></label>
+          <p class="form-msg" id="formMsg" role="status"></p>
+          <button class="submit" type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <div class="watermark" aria-hidden="true">Contact</div>
+  </section>
+</main>
+
+<!-- FOLDER TABS (always visible) -->
+<nav class="tabs" aria-label="Pages">
+  <a href="#about" data-tab="about" class="tab t-about">ABOUT</a>
+  <a href="#works" data-tab="works" class="tab t-works">WORKS</a>
+  <a href="#contact" data-tab="contact" class="tab t-contact">CONTACT</a>
+</nav>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
